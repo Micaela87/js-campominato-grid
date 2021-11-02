@@ -80,7 +80,7 @@ button {
     background-color: white;
 }
 
-/* hides containers */
+/* hides elements */
 .hidden {
     display: none;
 }

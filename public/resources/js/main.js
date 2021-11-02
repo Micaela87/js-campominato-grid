@@ -1,4 +1,13 @@
 /*
+1. seleziono i nodi HTML che mi servono
+2. creo una funzione per generare quadrati a seconda della difficoltà del livello
+    2.1 scrivo una funzione a cui passo un parametro number a cui dovrà corrispondere il valore estrapolato dal button cliccato
+    2.2 creo un ciclo for che si dovrà ripetere tante volte quanto il valore del button cliccato
+    2.3 nel ciclo creo un nuovo div ed un nuovo span
+    2.4 aggiungo il nuovo span al nuovo div ed il nuovo div al contenitore del gioco
+        2.4.1 a seconda del valore passato alla funzione, associo al div la relativa classe in modo che i quadrati siano tutti in ordine
+    2.5 assegno un evento click ad ogni quadrato
+3. ad ogni button di livello assegno un evento click, e chiamo la funzione che genera i quadratini passandole come parametro il valore corrispondente al button cliccato trasformato in numero
 */
 const buttonContainer = document.getElementById('buttons');
 const gameContainer = document.getElementById('game');
