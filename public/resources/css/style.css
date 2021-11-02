@@ -1,3 +1,4 @@
+/* general rules */
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +13,17 @@ body {
     text-align: center;
 }
 
+/* general rules for main containers */
 .container {
     width: 90%;
     height: 50rem;
     margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* levels */
 h1 {
     font-size: 2rem;
     padding: 2rem 0;
@@ -35,26 +41,45 @@ button {
     cursor: pointer;
 }
 
+/* game */
+.container-square {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container-square {
-    width: 50%;
-    height: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    border: 2px solid white;
-}
-
+/* square rules for easy level */
 .square {
-    width: 4rem;
+    width: calc(100% / 10);
     height: 4rem;
     border: 2px solid white;
+    cursor: pointer;
 }
 
+/* square rules for medium level */
+.square-nine {
+    width: calc(100% / 9);
+    height: 4.5rem;
+}
+
+/* square rules for difficult level */
+.square-seven {
+    width: calc(100% / 7);
+    height: 6rem;
+}
+
+/* rule for clicked square */
+.square.clicked-true {
+    background-color: white;
+}
+
+/* hides containers */
 .hidden {
     display: none;
 }
