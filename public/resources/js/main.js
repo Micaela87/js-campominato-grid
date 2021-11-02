@@ -8,8 +8,12 @@ const levelButtons = document.querySelectorAll('button');
 // generates squares according to the value of the button clicked
 // adds click event to each square generated
 const generateSquares = (number) => {
-    for (let i = 0; i < number; i++) {
+    for (let i = 1; i <= number; i++) {
         let newDiv = document.createElement('div');
+        let newSpan = document.createElement('span');
+        newSpan.append(i);
+        newSpan.classList.add('hidden');
+        newDiv.append(newSpan);
         newDiv.classList.add('square');
         
         if (number === 81) {
@@ -21,6 +25,7 @@ const generateSquares = (number) => {
         newDiv.addEventListener('click', 
             function() {
                 newDiv.classList.add('clicked-true');
+                newSpan.classList.remove('hidden');
             }
         )
 
